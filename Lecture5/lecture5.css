@@ -1,0 +1,39 @@
+.paragraph{
+    color: rgb(195, 62, 62);
+}
+#paragraph{
+    color: blue;
+}
+h1{
+    color: green;
+}
+
+.paragraph, #paragraph, h1{
+    text-align: center;
+}
+
+div p{
+    color: rgb(2, 16, 16);
+}
+
+div > p{
+    background-color: chartreuse;
+}
+
+div + p{
+    background-color: blueviolet;
+}
+
+div ~ p{
+    background-color: rgb(226, 223, 43);
+}
+h3:hover{
+    color: blueviolet;
+}
+h4::first-letter{
+    color: brown;
+}
+
+a[target]{
+    background-color: burlywood;
+}
