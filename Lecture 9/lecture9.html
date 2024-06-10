@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 8</title>
+</head>
+<body>
+    <main>
+        <h1 onclick="changeText(this)"> This is My Page </h1>
+            <div>
+                <button onclick="displayDate()">The time is: </button>
+            <p id="demo"></p>
+            </div> 
+            <!-- <form > -->
+                <input type="text" id="firstName" onchange="upperCase()">
+            <!-- </form> -->
+
+             <div onmouseover="mOver(this)" onmouseout="mOut(this)"  onmousedown ="mDown(this)" onmouseup="mUp(this)" style="background-color: red; width: 120px; height: 20px; padding: 40px;">
+                Mouse over me
+             </div>
+    </main>
+
+    <script>
+        function changeText(id){
+            id.innerHTML = `This is after click!`;
+        }
+
+        function displayDate(){
+            document.getElementById("demo").innerHTML = new Date();
+        }
+
+        function upperCase(){
+            const x = document.getElementById("firstName");
+            x.value = x.value.toUpperCase();
+        }
+
+        function mOver(obj){
+            obj.innerHTML = "Thank you";      
+          }
+
+          function mOut(obj){
+            obj.innerHTML = "Mouse over Me";
+          }
+
+          function mDown(ob){
+            obj.style.backgroundColor = "cyan";
+            obj.innerHTML = "Release me"
+          }
+          function mUp(ob){
+            obj.style.backgroundColor = "yellow";
+            obj.innerHTML = "Thank You"
+          }
+
+    </script>
+    
+</body>
+</html>
