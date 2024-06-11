@@ -1,0 +1,14 @@
+Objects:- Unique entity that contaons some properties and methods. It is a instance of a class. 
+1.Object Literal
+2. Object Constructor
+3. Object.create()
+
+Classes: blueprint of an object. There are no classes in js. It has only object. 
+
+Abstration: displaying the esssential details only and hidng the nackground details.
+
+Encapsulation : process of wrapping proprtiees nd fucntions within a single unit
+
+Inheritance: inherits properties from superclass to sub classes.
+
+Polymorphism: same function with different signaturesand can be achieved by overloading and overriding.
