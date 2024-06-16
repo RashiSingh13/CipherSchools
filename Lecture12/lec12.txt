@@ -1,0 +1,33 @@
+MERN stack - 
+1. Mongo Db
+- Cross-platform document oriented database.
+- Each record is a document comprising of key-value pairs similar to JSON.
+- Provides a js interface through which the users can interact and carry out operations.
+- Fast, Scalability
+- Data is stored in the form of BSON(similar to JSON)- Sharing data is easy.
+
+2. Express Js
+- Backend Framework inside Node.js framework.
+- It is Asynchronous and single-threaded.
+- Efficient, Fast , Scalable
+- Promots code reusability with built-in-router.
+- Robust api
+
+3. React Js
+- Frontend framework
+- Js library developed by Meta
+- Used for Single Page Applications and mobile applictions.
+- Ability to change rapidly changing data.
+- Virtual DOM - copy of original DOM
+- JSX - JavaScript XML. 
+- An HTML/XML Jsextension used in react
+- Component - building block of UI that promotes code reusability. It is like function calling.
+
+4. Node Js
+- JS runtime environment
+- allows user to run code on the server. 
+- NPM allows user to choose from thousands of free packages to download and use in project.
+- Open-source
+- Single threading
+
+
