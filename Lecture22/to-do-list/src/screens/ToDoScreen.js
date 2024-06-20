@@ -2,6 +2,7 @@
 
 import {useState} from "react";
 import Task from "../Components/task";
+import AddTask from "../Components/AddTask";
 
 // class ToDoScreen extends Component {
 
@@ -42,7 +43,9 @@ const ToDoScreen = () =>{
 
 
     return  (
-                    <div className="screen">
+                   
+                   <>
+                   <div className="screen">
                 <h1 className="ui heading center">To Do List </h1>
                 <div>
                     <button 
@@ -66,7 +69,9 @@ const ToDoScreen = () =>{
                     </div>
                     </section>
                 </div>
+                <AddTask/>
                 </div>
+        </>
                 );
 };
 export default ToDoScreen;
