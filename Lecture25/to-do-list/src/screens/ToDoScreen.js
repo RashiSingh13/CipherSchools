@@ -40,7 +40,9 @@ import AddTask from "../Components/AddTask";
 const ToDoScreen = () =>{
 
     const [ taskList, setTaskList] = useState( [ ] );
-
+    let addNewTask = (task)=>{
+        setTaskList( [...taskList, {...task, createdDate: new Date()}]);
+    };
 
     return  (
                    
@@ -62,14 +64,14 @@ const ToDoScreen = () =>{
 
                     <section>
 
-                    <div class="ui cards">
+                    <div className="ui cards">
                     { taskList.map ( (task, index) =>(
                 <Task task={task} kry={ index} />
                     ))}     
                     </div>
                     </section>
                 </div>
-                <AddTask/>
+                {/* <AddTask onSubmit={addNewTask}/> */}
                 </div>
         </>
                 );

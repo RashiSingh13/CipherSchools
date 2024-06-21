@@ -8,7 +8,7 @@ const Task = (  {task: {title, description, createdDate}}) =>{
       <div className="header">
         {title}
       </div>
-      <div class="meta">
+      <div className="meta">
         {formatDate(createdDate)}
       </div>  
       <div className="description">
