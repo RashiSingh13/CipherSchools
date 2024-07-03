@@ -1,8 +1,8 @@
 import { convertToFahrenheit, getWeatherTypeFromCode } from "../WeatherUtil";
-const WeatherSummary = (
-  { currentWeather: { temperature, weatherCode } },
-  isCelsius
-) => {
+const WeatherSummary = ({
+  currentWeather: { temperature, weatherCode },
+  isCelsius,
+}) => {
   return (
     <div>
       <h1>

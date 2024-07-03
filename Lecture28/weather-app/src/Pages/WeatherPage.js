@@ -40,26 +40,28 @@ const WeatherPage = () => {
     let currentWeather = tempWeekWeather.current_weather;
     currentWeather.time = new Date(currentWeather.time);
     currentWeather.isDay = currentWeather.isDay === 1 ? true : false;
-    delete currentWeather.is_day;
+    // delete currentWeather.is_day;
     currentWeather.weatherCode = currentWeather.weathercode;
     delete currentWeather.weathercode;
     setTodayWeather(currentWeather);
   };
-
+ if ( !weekWeather.length){
+  return <p>Loading...</p>
+ }
   return (
     <div className={isDay ? "app" : "app dark"}>
       <h1 className="my-heading">Weather</h1>
       <button
         className="ui icon button"
         onClick={() => {
-          setIsCelsius( !isCelsius );
+          setIsCelsius(!isCelsius);
         }}
         style={{ float: "right" }}
       >
-       { isCelsius ? "°F" : "°C" }
+        {isCelsius ? "°F" : "°C"}
       </button>
       <div>
-        <WeatherSummary currentWeather = {todayWeather} isCelsius = {isCelsius} />
+        <WeatherSummary currentWeather={todayWeather} isCelsius={isCelsius} />
         <table className={`ui very basic table ${!isDay ? "dark" : ""}`}>
           <thead className={`table-custom${!isDay ? "dark" : ""}`}>
             <tr>
@@ -69,13 +71,13 @@ const WeatherPage = () => {
             </tr>
           </thead>
           <tbody className="table-custom">
-            <WeatherRow />
-            <WeatherRow />
-            <WeatherRow />
-            <WeatherRow />
-            <WeatherRow />
-            <WeatherRow />
-            <WeatherRow />
+            {weekWeather.map((weather) => (
+              <WeatherRow
+                weather={weather}
+                isCelsius={isCelsius}
+                key={weather.date}
+              />
+            ))}
           </tbody>
         </table>
       </div>

@@ -1,9 +1,28 @@
-const WeatherRow = () => {
+import { convertToFahrenheit, getWeatherTypeFromCode } from "../WeatherUtil";
+
+const dateFormatter = new Intl.DateTimeFormat("en-IN", {
+  month: "short",
+  day: "numeric",
+  year: "2-digit",
+});
+const formatDate = (date) => dateFormatter.format(date);
+
+const WeatherRow = ({
+  weather: { date, maxTemperature, minTemperature, weatherCode },
+  isCelsius,
+}) => {
   return (
     <tr>
-      <td>01 Jan. 2023</td>
-      <td>H: 30°C - L: 25°C</td>
-      <td>Sunny</td>
+      <td>{formatDate(date)}</td>
+      <td>
+        H:{" "}
+        {isCelsius
+          ? `${maxTemperature} °C`
+          : `${convertToFahrenheit(maxTemperature)} °F`}{" "}
+        - L: {isCelsius
+        ? `${minTemperature} °C` : `${convertToFahrenheit(minTemperature)} °F` }
+      </td>
+      <td>{getWeatherTypeFromCode(weatherCode)}</td>
     </tr>
   );
 };
