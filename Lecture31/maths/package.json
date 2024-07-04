@@ -1,0 +1,12 @@
+{
+  "name": "maths",
+  "version": "1.0.0",
+  "description": "This is further previous.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rashi Singh",
+  "license": "ISC"
+}
