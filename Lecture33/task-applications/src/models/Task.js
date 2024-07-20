@@ -5,7 +5,7 @@ const TaskSchema = new Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     isComplete: { type: Boolean, default: false },
-    //   owner: { type: Schema.Types.ObjectId, require: true, ref: "User" },
+    // owner: { type: Schema.Types.ObjectId, required: true, ref: "User" },
   },
   { timestamps: true }
 );
