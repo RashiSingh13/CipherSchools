@@ -10,6 +10,10 @@ const App = () => {
           <Test key={1} />
           <Test key={2} />
           <Test key={3} />
+          <Test key={4} />
+          <Test key={5} />
+          <Test key={6} />
+          <Test key={7} />
           <h1>Rashi Singh</h1>
         </section>
       </div>

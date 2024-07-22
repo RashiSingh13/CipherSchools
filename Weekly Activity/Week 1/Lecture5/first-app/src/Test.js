@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./text.css";
 const Test = () => {
   return <h1>Hello from Test Component</h1>;
 };
@@ -6,7 +7,11 @@ const Test = () => {
 class Text extends Component {
   render() {
     console.log("Hello!");
-    return <h1>Hello from Text Component</h1>;
+    return (
+      <div>
+        <h1 id="testId">Hello from Text Component</h1>
+      </div>
+    );
   }
 }
 
